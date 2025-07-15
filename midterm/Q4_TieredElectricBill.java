@@ -23,19 +23,22 @@ public class Q4_TieredElectricBill {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int sum = 0;
+        int[] usages = new int[n];
         for (int i = 0; i < n; i++) {
-            int kwh = sc.nextInt();
-            int b = calc(kwh);
-            System.out.println("Bill: $" + b);
-            sum += b;
+            usages[i] = sc.nextInt();
         }
-        System.out.println("Total: $" + sum);
-        System.out.println("Average: $" + (int) Math.round((double) sum / n));
+        int total = 0;
+        for (int kwh : usages) {
+            int cost = calc(kwh);
+            System.out.println("Bill: $" + cost);
+            total += cost;
+        }
+        System.out.println("Total: $"   + total);
+        System.out.println("Average: $" + (int) Math.round((double) total / n));
     }
 }
 
 /*
  * Time Complexity: O(n)
- * 說明：對每筆資料呼叫固定階段計算函式，整體為線性
+ * 說明：讀入 n 筆用電量後，各呼叫一次 calc（固定階段數量），整體為線性時間
  */
