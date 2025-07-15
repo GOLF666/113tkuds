@@ -40,5 +40,5 @@ public class Q4_TieredElectricBill {
 
 /*
  * Time Complexity: O(n)
- * 說明：讀入 n 筆用電量後，各呼叫一次 calc（固定階段數量），整體為線性
+ * 說明：讀入 n 筆用電量後，各呼叫一次 calc（固定階段數量），整體為線性時間
  */
