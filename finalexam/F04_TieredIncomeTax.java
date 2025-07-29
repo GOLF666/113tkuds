@@ -4,7 +4,7 @@ import java.util.*;
 
 public class F04_TieredIncomeTax {
     static double[] rates    = {0.05, 0.12, 0.20, 0.30, 0.40};
-    static int[]    limits   = {540000, 1210000, 2420000, 453000}; 
+    static int[]    limits   = {540000, 1210000, 2420000, 4530000}; 
 
     static long calcTax(long income) {
         long tax = 0;
